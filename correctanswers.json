@@ -1,0 +1,23 @@
+[
+  {
+    "id": "qwrfdsf",
+    "correct": ["Москва", "Тюмень"]
+  },
+  {
+    "id": "qwedasfsd",
+    "correct": [
+      {
+        "id": "qwrfsdf",
+        "correct": "dolor"
+      },
+      {
+        "id": "qwrfdsfsd",
+        "correct": "amet"
+      }
+    ]
+  },
+  {
+    "id": "qewrfsdf",
+    "correct": "Лондон"
+  }
+]

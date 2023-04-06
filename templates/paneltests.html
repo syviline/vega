@@ -1,0 +1,25 @@
+{% extends "panelbase.html" %}
+
+{% block content %}
+<div class="content__head">
+    <h1>Тесты</h1>
+    <a href="/panel/tests/new"><span class="material-icons-round" style="color: #86efac">add</span>Создать</a>
+</div>
+{% for test in tests %}
+<div class="class" style="display: flex; justify-content: space-between;">
+    <a href="/panel/test/{{ test.id }}">{{ test.title }}</a>
+    {% if not test.is_completable %}
+    <span style="color: red">Тест не доделан до конца</span>
+    {% endif %}
+    <a class="material-icons-round" style="cursor: pointer; color: #ef4444" onclick="deletetest({{ test.id }}, '{{ test.title }}')">delete</a>
+</div>
+{% endfor %}
+    <script>
+        function deletetest(id, name) {
+            a = confirm("Вы уверены что хотите удалить тест " + name + "?")
+            if (a) {
+                location = '/deletetask/' + id
+            }
+        }
+    </script>
+{% endblock %}
